@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\Cron_MyCronActions;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Plugin\Cron_MyCronActions\Console\MyCronAction;
 
 class Plugin extends Base
 {
