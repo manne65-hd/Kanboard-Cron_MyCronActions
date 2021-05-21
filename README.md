@@ -3,7 +3,7 @@ Cron_MyCronActions
 
 Skeleton for a plugin that can add new actions to the CLI-interface
 
-### This is only a skeleton that's only meant to figure out how to make this work!
+### This is just a skeleton that's only meant to figure out how to make this work!
 
 #### List of planned features
 - [ ] Figure out how to add new action(s) to the CLI-interface
