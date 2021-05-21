@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\Cron_MyCronActions;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Plugin\Cron_MyCronActions\Console\MyCronAction;
+use Kanboard\Plugin\Cron_MyCronActions\Console\MyOtherCronAction;
 use Pimple\Container;
 
 class Plugin extends Base
@@ -15,6 +16,7 @@ class Plugin extends Base
 
         // create new CLI-command
         $this->cli->add(new MyCronAction($container));
+        $this->cli->add(new MyOtherCronAction($container));
     }
 
     public function getPluginName()
