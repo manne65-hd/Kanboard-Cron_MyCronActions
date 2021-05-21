@@ -4,13 +4,17 @@ namespace Kanboard\Plugin\Cron_MyCronActions;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Plugin\Cron_MyCronActions\Console\MyCronAction;
+use Pimple\Container;
 
 class Plugin extends Base
 {
     public function initialize()
     {
+        // create a new instance of pimple-container
+        $container = new Container;
+
         // create new CLI-command
-        $this->cli->add(new MyCronAction());
+        $this->cli->add(new MyCronAction($container));
     }
 
     public function getPluginName()
@@ -30,7 +34,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '0.0.1';
+        return '0.0.3';
     }
 
     public function getPluginHomepage()
