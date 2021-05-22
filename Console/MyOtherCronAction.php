@@ -10,18 +10,18 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Class MyCronAction
  *
  */
-class MyCronAction extends BaseCommand
+class MyOtherCronAction extends BaseCommand
 {
     protected function configure()
     {
         $this
-            ->setName('mycron:first-action')
-            ->setDescription('Display "My Cron Action" on the console')
+            ->setName('mycron:other-action')
+            ->setDescription('Display "My OTHER Cron Action" on the console')
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $output->writeln('My Cron Action');
+        $output->writeln('My OTHER Cron Action');
     }
 }
