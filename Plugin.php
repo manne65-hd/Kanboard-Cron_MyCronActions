@@ -13,13 +13,21 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        // create a new instance of pimple-container
-        $container = new Container();
-
         // create new CLI-commands
-        $this->cli->add(new MyCronAction($container));
-        $this->cli->add(new MyOtherCronAction($container));
-        $this->cli->add(new CreateTask($container));
+        $this->cli->add(new MyCronAction($this->container));
+        $this->cli->add(new MyOtherCronAction($this->container));
+        $this->cli->add(new CreateTask($this->container));
+    }
+
+    public function getClasses()
+    {
+        return [
+            'Plugin\Cron_MyCronActions\Console' => [
+                'MyCronAction',
+                'MyOtherCronAction',
+                'CreateTask',
+                ],
+        ];
     }
 
     public function getPluginName()
@@ -39,7 +47,7 @@ class Plugin extends Base
 
     public function getPluginVersion()
     {
-        return '0.0.5';
+        return '0.0.6';
     }
 
     public function getPluginHomepage()
