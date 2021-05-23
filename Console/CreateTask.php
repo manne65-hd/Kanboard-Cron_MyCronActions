@@ -34,10 +34,10 @@ class CreateTask extends BaseCommand
     private function createTask()
     {
         $taskId = $this->taskCreationModel->create(array(
-            'project_id'  => 14,
+            'project_id'  => 1,
             'title'       => 'A new task via CRON-Plugin',
-            'description' => 'A short description of the newly created task ...',
-            'creator_id'  => 3,
+            'description' => 'A short description for the newly created task ...',
+            'creator_id'  => 1,
         ));
 
         return $taskId;
