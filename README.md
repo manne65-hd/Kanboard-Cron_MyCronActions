@@ -1,3 +1,12 @@
+## This repository has been archived
+I now provide better examples here:
+ - https://github.com/manne65-hd/Kanboard-Cron_SingleCustomCommand
+ - https://github.com/manne65-hd/Kanboard-Cron_ManyCustomCommands
+
+
+
+
+
 Cron_MyCronActions
 ==================
 
